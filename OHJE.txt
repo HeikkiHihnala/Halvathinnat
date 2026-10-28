@@ -1,0 +1,81 @@
+HALPAHETKI – KÄYTTÖÖNOTTO JA GITHUB PAGES -JULKAISU
+
+Tämä on puhelimeen asennettava verkkosovellus (PWA). Sen tiedostot julkaistaan HTTPS-osoitteessa esimerkiksi GitHub Pagesin avulla.
+
+GITHUB PAGES – HELPPO OHJE ILMAN KOMENTORIVIÄ
+
+1. Mene osoitteeseen https://github.com ja kirjaudu sisään (tai luo GitHub-tili).
+
+2. Luo uusi repository eli säilö:
+   - Valitse oikeasta yläkulmasta + > New repository.
+   - Anna nimeksi esimerkiksi: halpahetki
+   - Valitse Public, jos käytät GitHub Free -tiliä.
+   - Luo repository valitsemalla Create repository.
+
+3. Pura HalpaHetki_PWA.zip omalla tietokoneellasi.
+   ZIP-paketin sisältä löytyvät ainakin:
+   - index.html
+   - app.js
+   - manifest.webmanifest
+   - sw.js
+   - icon.svg
+
+4. Lataa tiedostot GitHubiin:
+   - Avaa luomasi halpahetki-repository.
+   - Valitse Add file > Upload files.
+   - Vedä ZIPistä PURETUT tiedostot latausalueelle. Älä lataa pelkkää ZIP-tiedostoa.
+   - Varmista erityisesti, että index.html näkyy repositoryn ylimmällä tasolla.
+   - Kirjoita commit-viestiksi esimerkiksi: Ensimmäinen versio
+   - Valitse Commit changes.
+
+5. Ota GitHub Pages käyttöön:
+   - Avaa repositoryssa Settings.
+   - Valitse vasemmalta Pages.
+   - Kohdassa Build and deployment / Source valitse Deploy from a branch.
+   - Branch: main
+   - Folder: / (root)
+   - Valitse Save.
+
+6. Odota julkaisua hetki ja päivitä Pages-asetussivu.
+   GitHub näyttää sivulla julkaistun osoitteen. GitHub.comissa projektisivun osoite on yleensä muotoa:
+   https://KÄYTTÄJÄNIMI.github.io/halpahetki/
+
+7. Avaa osoite ensin tietokoneen selaimella ja paina "Etsi halvin aika". Jos saat hintasuosituksen, sovellus toimii.
+
+ASENNUS PUHELIMEEN
+
+Android / Chrome:
+- Avaa GitHub Pages -osoite Chromessa.
+- Valitse selaimen valikosta Asenna sovellus tai Lisää aloitusnäyttöön.
+
+IPhone / Safari:
+- Avaa GitHub Pages -osoite Safarissa.
+- Paina Jaa-painiketta.
+- Valitse Lisää Koti-valikkoon.
+
+PÄIVITYKSET MYÖHEMMIN
+
+Kun sovelluksesta tehdään uusi versio, korvaa muuttuneet tiedostot repositoryssa ja tee Commit changes. GitHub Pages julkaisee main-haaran muutokset uudelleen automaattisesti.
+
+HUOMIO
+- GitHub Pages -sivu on internetissä julkisesti käytettävissä. Älä lisää repositoryyn salasanoja, tunnuksia, API-avaimia tai henkilötietoja.
+- HalpaHetki ei tarvitse GitHubiin mitään salaista API-avainta.
+- Oletukset: Suomen hinta-alue, sallittu käyttö klo 07–22, hinnat sisältävät ALV:n.
+- Hintatietojen hakeminen vaatii internetyhteyden.
+
+
+SOVELLUKSEN PÄIVITTÄMINEN GITHUB PAGESISSA
+
+1. Pura uusi ZIP-paketti tietokoneelle.
+2. Avaa GitHubissa sama halpahetki-repository.
+3. Valitse Add file > Upload files.
+4. Lataa ainakin uudet app.js- ja sw.js-tiedostot. Voit turvallisesti ladata kaikki puretut tiedostot uudelleen.
+5. Hyväksy olemassa olevien tiedostojen korvaaminen ja paina Commit changes.
+6. Avaa Actions-välilehti tai Settings > Pages ja odota, että julkaisu valmistuu.
+7. Avaa HalpaHetki puhelimessa internetyhteydellä. Sulje sovellus kokonaan ja avaa se uudelleen.
+8. Jos vanha versio näkyy edelleen, avaa GitHub Pages -osoite selaimessa, päivitä sivu ja käynnistä asennettu sovellus uudelleen. Viimeisenä keinona poista aloitusnäytön vanha kuvake ja lisää sovellus uudelleen.
+
+KORJAUS VERSIOSSA 2
+- Kun yöaikaa ei ole sallittu, koko käyttöjakson on alettava aikaisintaan valittuna aloitusaikana ja päätyttävä viimeistään valittuna valmistumisaikana.
+- Oletuksilla 07:00–22:00 esimerkiksi kahden tunnin pesu voi alkaa viimeistään klo 20:00.
+- Yön yli jatkuvaa käyttöjaksoa ei hyväksytä, ellei Yöaika sallitaan -valintaa ole valittu.
